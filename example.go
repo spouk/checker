@@ -21,3 +21,6 @@ func NewBrancCheck(count int) *Check {
 		log: log.New(os.Stderr, checker, log.Lshortfile | log.Ltime),
 	}
 }
+func (c *Check) ShowVersion() {
+	c.log.Printf("version check 0.0.1")
+}
